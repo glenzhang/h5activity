@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>H5 Activity</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <style>
+        html { font-size: 62.5%; /*10 ÷ 16 × 100% = 62.5%*/ }
+        body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+        dl, dt, dd, ul, ol, li,
+        pre,
+        fieldset, lengend, button, input, textarea,
+        th, td { margin: 0; padding: 0; }
+        body, button, input, select, textarea { font: 1.4rem/1.6 Tahoma, Helvetica, Arial, "宋体", sans-serif; }
+        a { color: #666; text-decoration: none; }
+        a:active { outline: none; }
+
+        .catalog { margin-bottom: 1rem; }
+        .title { height: 3rem; padding-left: 1rem; background: #2b88cf; color: #fff; font-size: 1.6rem; font-weight: bold; line-height: 3rem; }
+        .catalog ul { }
+        .catalog li { height: 3rem; padding-left: 0.7rem; line-height: 3rem; border-bottom: 0.1rem solid #e5e5e5; }
+        .catalog li a { display: block; }
+        #wrapper { position: absolute; z-index: 1; top: 0; bottom: 0px; left: 0; width: 100%; overflow: hidden; }
+
+        #scroller { position: absolute; z-index: 1; -webkit-tap-highlight-color: rgba(0,0,0,0); width: 100%; -webkit-transform: translateZ(0); transform: translateZ(0); -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; -webkit-text-size-adjust: none; }
+    </style>
+
+    <script src="http://static2.51fanli.net/common/libs/fmu/js/vendors/iscroll/iscroll-lite-v5.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="scroller">
+            <section class="catalog">
+                <h6 class="title">H5 Activity</h6>
+                <ul>
+                   <li>
+                        <a href="example/zhuanpan/index.html">转盘</a>
+                    </li>
+                    <li>
+                        <a href="example/fudai/index.html">福袋</a>
+                    </li>
+                </ul>
+
+            </section>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        new IScroll('#wrapper', { preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/ } })
+    </script>
+</body>
+</html>
