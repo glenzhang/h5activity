@@ -1,0 +1,41 @@
+﻿html, body { height: 100%; overflow: hidden; -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; }
+body { background: url(../images/line-wave.png); }
+.wrap-guide { height: 100%; background: url(../images/bg1.png) no-repeat 0 0; background-size: cover; }
+.wrap-game { height: 100%; background: url(../images/bg2.png) no-repeat 0 0; background-size: cover; }
+.wrap-none{height: 100%; background: url(../images/no-tips-2.png) no-repeat 0 0; background-size: cover; }
+.wrap-got{height: 100%; background: url(../images/got-tips.png) no-repeat 0 0; background-size: cover; }
+
+.num { position: fixed; width: 100%; left: 1.93rem; top: 4.9rem; margin: 0 auto; width: 2.49rem; height: 2.8rem; background: url(../images/num.png) no-repeat 0 -5.6rem; background-size: 100%; }
+.num_1 { background-position: 0 0; }
+.num_2 { background-position: 0 -2.8rem; }
+.num_3 { background-position: 0 -5.6rem; }
+.whale { position: fixed; bottom: 0; left: 0; z-index: 2; width: 100%; height: 2.78rem; background: url(../images/whale-2.png) no-repeat 0 0; background-size: 100%; }
+
+.red-packet { position: absolute; top: 0; left: 0; width: 2.54rem; height: 2.39rem; background-size: 100%; }
+.dd1 { background-image: url(../images/dd1-2.png); }
+.dd2 { background-image: url(../images/dd2-2.png); }
+.dd3 { background-image: url(../images/dd3-2.png); }
+.dd4 { background-image: url(../images/dd4-2.png); }
+
+.peng { position: fixed; width: 1.5rem; height: 1.5rem; background: url(../images/peng.png) no-repeat 0 0; background-size: 100%; }
+.plus-one { position: fixed; top: 50%; left: 50%; width: 1.53rem; height: 1.16rem; line-height:1.16rem; text-align:center; margin-top: -0.58rem; margin-left:-0.76rem; color: #ffff00; font-size: 0.8rem; }
+.count-down-text { position: fixed; right: 0.1rem; top: 0.6rem; font-size: 0.32rem; color: #fff; }
+.count-down-text span { color: #e1dc12; }
+.awards-text { position: fixed; top: 0.3rem; left: 0.1rem; color: #fff; line-height: 0.3rem; }
+
+.plus-animated { -webkit-animation-duration: .6s; animation-duration: .6s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-name: bounceOutDown1; animation-name: bounceOutDown1; }
+
+@keyframes bounceOutDown1 {
+    from { opacity: 1; -webkit-transform: scale(1); transform: scale(1); }
+    to { opacity: 0; -webkit-transform: scale(2); transform: scale(2); }
+}
+
+.btn-close { position: absolute; right: 0.25rem; top: 0.25rem; z-index: 3; width: 0.4rem; height: 0.4rem; border: 1px solid #9782A3; -weibkit-border-radius: 100%; border-radius: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.btn-close:before, .btn-close:after { position: absolute; top: 0.18rem; left: 0.08rem; display: block; width: 0.2rem; height: 1px; overflow: hidden; background: #9782A3; content: " "; }
+.btn-close:before { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+.btn-close:after { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+.total-awards{ position: absolute; top: 5rem; width: 100%; color: #fb3347; font-size: 0.28rem; }
+.total-awards-container { width: 2.8rem; margin: 0 auto; overflow: hidden; white-space: nowrap; }
+.got-btn-box{position: absolute; width: 100%; top: 8.5rem; text-align: center;}
+.go-11-btn { display: inline-block; width: 4.38rem; height: 0.7rem; line-height: 0.7rem; font-size: 0.32rem; color: #fff; background-color: #ff007f; text-align: center; -webkit-border-radius: 6px; border-radius: 6px; }

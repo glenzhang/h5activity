@@ -2,17 +2,17 @@
 <html>
 
 <head>
-    <title>福袋</title>
+    <title>红包雨</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <script>
     (function(win, doc) {
-
+        
         var evt = 'onorientationchange' in win ? 'orientationchange' : 'resize';
         var timer = null;
         var ua = navigator.userAgent.toLowerCase();
         var isIos = /ip(hone|od|ad)/i.test(ua);
-        var remwidth = 750;
+        var remwidth = 640;
 
         function setFontSize() {
             var docEl = doc.documentElement;
@@ -46,47 +46,26 @@
     }(window, document));
     </script>
     <link rel="stylesheet" href="http://static2.51fanli.net/webapp/css/base.css">
-    <link rel="stylesheet" href="http://static2.51fanli.net/common/css/animate/animate.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="come-text-wrap" id="J_come_text_wrap">
-            <img class="come-text" src="images/come-text.png" alt="">
-            <div class="num-container" id="J_num_container">
-                <img class="come-text animated zoomIn" src="images/1.png" alt="" style="display: none;">
-                <img class="come-text animated zoomIn" src="images/2.png" alt="" style="display: none;">
-                <img class="come-text animated zoomIn" src="images/3.png" alt="" style="display: none;">
-                <img class="come-text animated zoomIn" src="images/4.png" alt="" style="display: none;">
-                <img class="come-text animated pulse" src="images/5.png" alt="">
-            </div>
-        </div>
-        <div class="fd-wrap" id="J_fd_wrap" style="display: none;">
-            <div class="result-box">
-                <div class="cd-container">
-                    <img class="icon-cd" src="images/icon-cd.png">
-                    <span id="J_cd_num" class="result-text">20</span>
-                </div>
-                <div class="gift-container">
-                    <img class="icon-gift" src="images/icon-gift.png">
-                    <span class="result-text" id="J_result_text">00</span>
-                </div>
-            </div>
-            <div class="come-on-wrap" id="J_come_on_wrap"></div>
-            <div class="fd-box" id="J_fd_box">
-                <img id="J_fd" class="fd-img animated J_fanli_ubt_trigger" src="images/fudai.png">
-                <img class="fd-tray-img" src="images/fudai-tray.png">
-                <div class="hit-me animated tada infinite" id="J_hit_me"></div>
-            </div>
-        </div>
+    <div class="wrap-guide" id="J_wrap_guide">
+        <div class="num num_3" id="J_num"></div>
     </div>
+    <div class="wrap-game" id="J_wrap_game" style="display:none;">
+        <div class="awards-text" id="J_awards_text"></div>
+        <div class="plus-one plus-animated" id="J_plus_one" style="display:none;">+1</div>
+        <div class="count-down-text">还有<span id="J_left_second">30</span>秒</div>
+        <div class="peng" style="display:none;" id="J_peng"></div>
+    </div>
+    <div class="whale" id="J_whale"></div>
     <script src="http://static2.51fanli.net/common/libs/headjs/head.load.min.js"></script>
     <script>
     setTimeout(function() {
         head.load(["http://static2.51fanli.net/common/libs/fmu/js/vendors/jquery/jquery.min.js",
             "http://static2.51fanli.net/common/js/base.js",
-            "http://static2.51fanli.net/common/libs/fmu/js/vendors/parabola/parabola.js",
+            "http://static2.51fanli.net/common/libs/fmu/js/vendors/velocity/velocity.min.js",
             "js/index.js"
         ]);
     }, 10);

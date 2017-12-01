@@ -1,214 +1,35 @@
 html,
-body {
-    width: 100%;
-    height: 100%;
-}
-
-body {
-    background-color: rgba(0, 0, 0, .8);
-}
-
-.wrap {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.come-text-wrap {
-    position: absolute;
-    left: 0;
-    top: 2.72rem;
-    width: 100%;
-    text-align: center;
-}
-
-.come-text {
-    width: 3.85rem;
-    height: 1.92rem;
-}
-
-.num-container {
-    margin-top: 1.8rem;
-}
-
-.num-container img {
-    width: 2.37rem;
-    height: 2.37rem;
-}
-
-.fd-wrap {
-    position: absolute;
-    z-index: 9;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.result-box {
-    margin: .35rem 0 0 .38rem;
-}
-
-.cd-container {
-    position: relative;
-    margin-bottom: .15rem;
-}
-
-.result-text {
-    position: absolute;
-    top: .16rem;
-    left: .65rem;
-    display: block;
-    width: .99rem;
-    height: .5rem;
-    font-size: .34rem;
-    line-height: .5rem;
-    color: #fff;
-    text-align: center;
-}
-
-.gift-container {
-    position: relative;
-}
-
-.gift-container .result-text {
-    width: .9rem;
-    left: .7rem;
-    top: .11rem;
-}
-
-.icon-cd {
-    width: 1.69rem;
-    height: .79rem;
-}
-
-.icon-gift {
-    width: 1.69rem;
-    height: .79rem;
-}
-
-.fd-box {
-    position: absolute;
-    left: 0;
-    top: 6.37rem;
-    width: 100%;
-    text-align: center;
-}
-
-.fd-img {
-    width: 3.25rem;
-    height: 3.47rem;
-    -webkit-animation-duration: .2s;
-    animation-duration: .2s;
-}
-
-.fd-tray-img {
-    position: absolute;
-    left: 0;
-    top: 3.16rem;
-    z-index: -1;
-    width: 7.5rem;
-    height: 1.73rem;
-}
-
-.hit-me {
-    position: absolute;
-    width: 1.65rem;
-    height: .8rem;
-    right: .4rem;
-    top: 1.8rem;
-    background: url(../images/hit-me.png) no-repeat 0 0;
-    background-size: contain;
-}
-
-.come-on-wrap {
-    position: absolute;
-    right: 0.85rem;
-    top: 2.85rem;
-}
-
-.come-on-1 {
-    width: 2.6rem;
-    height: 1.43rem;
-}
-
-.come-on-2 {
-    width: 2.88rem;
-    height: 1.68rem;
-}
-
-.come-on-3 {
-    width: 3.12rem;
-    height: 1.42rem;
-}
-
-.come-on-4 {
-    width: 2.7rem;
-    height: 1.37rem;
-}
-
-.come-on-5 {
-    width: 2.88rem;
-    height: 1.14rem;
-}
-
-.plus {
-    position: absolute;
-    top: 3.43rem;
-    left: .9rem;
-    display: block;
-    width: 1.16rem;
-    height: .44rem;
-}
-
+body { width: 100%; height: 100%; }
+body { background-color: rgba(0, 0, 0, .8); }
+.wrap { position: relative; width: 100%; height: 100%; }
+.come-text-wrap { position: absolute; left: 0; top: 2.72rem; width: 100%; text-align: center; }
+.come-text { width: 3.85rem; height: 1.92rem; }
+.num-container { margin-top: 1.8rem; }
+.num-container img { width: 2.37rem; height: 2.37rem; }
+.fd-wrap { position: absolute; z-index: 9; left: 0; top: 0; width: 100%; height: 100%; }
+.result-box { margin: .35rem 0 0 .38rem; }
+.cd-container { position: relative; margin-bottom: .15rem; }
+.result-text { position: absolute; top: .16rem; left: .65rem; display: block; width: .99rem; height: .5rem; font-size: .34rem; line-height: .5rem; color: #fff; text-align: center; }
+.gift-container { position: relative; }
+.gift-container .result-text { width: .9rem; left: .7rem; top: .11rem; }
+.icon-cd { width: 1.69rem; height: .79rem; }
+.icon-gift { width: 1.69rem; height: .79rem; }
+.fd-box { position: absolute; left: 0; top: 6.37rem; width: 100%; text-align: center; }
+.fd-img { width: 3.25rem; height: 3.47rem; -webkit-animation-duration: .2s; animation-duration: .2s; }
+.fd-tray-img { position: absolute; left: 0; top: 3.16rem; z-index: -1; width: 7.5rem; height: 1.73rem; }
+.hit-me { position: absolute; width: 1.65rem; height: .8rem; right: .4rem; top: 1.8rem; background: url(../images/hit-me.png) no-repeat 0 0; background-size: contain; }
+.come-on-wrap { position: absolute; right: 0.85rem; top: 2.85rem; }
+.come-on-1 { width: 2.6rem; height: 1.43rem; }
+.come-on-2 { width: 2.88rem; height: 1.68rem; }
+.come-on-3 { width: 3.12rem; height: 1.42rem; }
+.come-on-4 { width: 2.7rem; height: 1.37rem; }
+.come-on-5 { width: 2.88rem; height: 1.14rem; }
+.plus { position: absolute; top: 3.43rem; left: .9rem; display: block; width: 1.16rem; height: .44rem; }
 .point-1,
-.point-5 {
-    position: absolute;
-    left: 50%;
-    top: .58rem;
-    z-index: -1;
-    width: .54rem;
-    height: .58rem;
-    margin-left: -.27rem;
-    background: url(../images/point-1.png) no-repeat 0 0;
-    background-size: contain;
-}
-
+.point-5 { position: absolute; left: 50%; top: .58rem; z-index: -1; width: .54rem; height: .58rem; margin-left: -.27rem; background: url(../images/point-1.png) no-repeat 0 0; background-size: contain; }
 .point-2,
-.point-6 {
-    position: absolute;
-    left: 50%;
-    top: .58rem;
-    z-index: -1;
-    width: .73rem;
-    height: .58rem;
-    margin-left: -.365rem;
-    background: url(../images/point-2.png) no-repeat 0 0;
-    background-size: contain;
-}
-
+.point-6 { position: absolute; left: 50%; top: .58rem; z-index: -1; width: .73rem; height: .58rem; margin-left: -.365rem; background: url(../images/point-2.png) no-repeat 0 0; background-size: contain; }
 .point-3,
-.point-7 {
-    position: absolute;
-    left: 50%;
-    top: .71rem;
-    z-index: -1;
-    width: .56rem;
-    height: .71rem;
-    margin-left: -.28rem;
-    background: url(../images/point-3.png) no-repeat 0 0;
-    background-size: contain;
-}
-
+.point-7 { position: absolute; left: 50%; top: .71rem; z-index: -1; width: .56rem; height: .71rem; margin-left: -.28rem; background: url(../images/point-3.png) no-repeat 0 0; background-size: contain; }
 .point-4,
-.point-8 {
-    position: absolute;
-    left: 50%;
-    top: .36rem;
-    z-index: -1;
-    width: .52rem;
-    height: .36rem;
-    margin-left: -.26rem;
-    background: url(../images/point-4.png) no-repeat 0 0;
-    background-size: contain;
-}
+.point-8 { position: absolute; left: 50%; top: .36rem; z-index: -1; width: .52rem; height: .36rem; margin-left: -.26rem; background: url(../images/point-4.png) no-repeat 0 0; background-size: contain; }
