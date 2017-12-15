@@ -1,0 +1,16 @@
+.lottery-wrap { position: relative; }
+.rule-trigger { position: absolute; display: block; width: 1.6rem; height: 0.6rem; right: 0.1rem; top: 0.3rem; -webkit-transform: rotate(12deg); transform: rotate(12deg); }
+.container-prize { position: relative; }
+.list-pirze { position: absolute; display: -webkit-flex; display: -webkit-box; width: 4rem; top: 0; left: 50%; margin-left: -2rem; z-index: 1; }
+.list-pirze li { -webkit-flex: 1; -webkit-box-flex: 1; height: 1.72rem; margin: 0 0.07rem; background: url(../images/prize-lists.png) repeat-y; background-size: 100% 10.32rem; transition: background-position 3s cubic-bezier(.5, .13, .27, 1.05); }
+.container-btn { position: relative; }
+.list-btn { position: absolute; bottom: 0.3rem; left: 50%; margin-left: -2.4rem; text-align: center; }
+.list-btn p, .list-btn a { display: inline-block; vertical-align: bottom; }
+.btn-left { width: 1.36rem; height: 0.65rem; margin-bottom: 0.15rem; background-color: #eaa912; line-height: 0.65rem; border-radius: 100%; box-shadow: 2px 3px 8px 0 #845307 inset; font-size: 0.18rem; color: #662b00; text-align: center; }
+.btn-left span { font-size: 0.35rem; color: #fff; margin-left: 0.05rem; vertical-align: -.04rem; }
+.btn-play { width: 2rem; height: 1.4rem; margin: 0 0.1rem; background: url(../images/btn-plays.png) no-repeat; background-size: 100%; background-position: 0 33%; }
+.btn-prize { width: 1.12rem; height: 0.8rem; margin-bottom: 0.1rem; background: url(../images/btn-prizes.png) no-repeat; background-size: 100%; }
+.container-list { position: relative;    /* height:1.49rem; */ }
+.user-list-container { position: absolute; width: 4.26rem; left: 50%; top: 0; margin: 0.1rem 0 0 -2.15rem; padding: 0.05rem 0; border: 0.02rem solid #ffe828; border-radius: 0.15rem; }
+.user-list-box { width: 4.15rem; height: 0.84rem; padding: 0.08rem 0; background: #452614; border-radius: 0.15rem; color: #fff; font-size: 0.18rem; overflow: hidden; }
+.user-list li { margin-left: 0.4rem; height: 0.33rem; line-height: 0.33rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }

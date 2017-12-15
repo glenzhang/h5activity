@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>幸运老虎机</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script>
+    (function(win, doc) {
+        var evt = 'onorientationchange' in win ? 'orientationchange' : 'resize';
+        var timer = null;
+        var ua = navigator.userAgent.toLowerCase();
+        var isIos = /ip(hone|od|ad)/i.test(ua);
+        var remwidth = 750;
+
+        function setFontSize() {
+            var docEl = doc.documentElement;
+            var winWidth = docEl.getBoundingClientRect().width;
+            var originFontSize;
+            var definedFontSize = (winWidth / remwidth) * 100;
+
+            docEl.setAttribute('data-screenwidth', winWidth);
+            docEl.style.fontSize = definedFontSize + 'px';
+            originFontSize = parseFloat(window.getComputedStyle(docEl, null).getPropertyValue("font-size"));
+
+            if (!isIos && definedFontSize != originFontSize) {
+                docEl.style.fontSize = (definedFontSize / originFontSize) * definedFontSize + 'px';
+            }
+        }
+        win.addEventListener(evt, function() {
+            clearTimeout(timer);
+            timer = setTimeout(setFontSize, 300);
+        }, false);
+
+
+        win.addEventListener("pageshow", function(e) {
+            if (e.persisted) {
+                clearTimeout(timer);
+                timer = setTimeout(setFontSize, 300);
+            }
+        }, false);
+
+        setFontSize();
+
+    }(window, document));
+    </script>
+    <link rel="stylesheet" href="http://static2.51fanli.net/webapp/css/base.css">
+    <link rel="stylesheet" href="http://static2.51fanli.net/common/libs/fmu/css/css3scrolltext.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!--min-height来源于后台计算得出，防止页面抖动-->
+    <div class="lottery-wrap">
+        <a href="javascript:void(0);" id="J_rule_trigger" class="rule-trigger"></a>
+        <img class="w100" src="images/banner1.jpg" style="min-height:4.15rem">
+        <img class="w100" src="images/banner2.jpg" style="min-height:2.12rem">
+        <div class="container-prize">
+            <img class="w100" src="images/banner3.jpg" style="min-height:1.84rem">
+            <ul class="list-pirze">
+                <li class="J_prize_item"></li>
+                <li class="J_prize_item"></li>
+                <li class="J_prize_item"></li>
+            </ul>
+        </div>
+        <div class="container-btn">
+            <img class="w100" src="images/banner4.jpg" style="min-height:1.89rem">
+            <div class="list-btn">
+                <p class="btn-left">剩余次数<span id="J_surplus_num"></span></p>
+                <a class="btn-play J_need_fanli_login" id="J_btn_play" href="javascript:void(0);"></a>
+                <a class="btn-prize" href="#"></a>
+            </div>
+        </div>
+        <div class="container-list">
+            <img class="w100 container-bg" src="images/banner5.jpg" style="min-height:1.49rem">
+            <div class="user-list-container">
+                <div class="user-list-box fmu-css3scrolltext-wrap">
+                    <ul class="user-list" id="J_scroll_list">
+                        <li>恭喜&nbsp;133*****723&nbsp;抽中5元红包</li>
+                        <li>恭喜&nbsp;133*****723&nbsp;抽中1元红包</li>
+                        <li>恭喜&nbsp;183*****212&nbsp;抽中10元红包</li>
+                        <li>恭喜&nbsp;133*****723&nbsp;抽中20元红包</li>
+                        <li>恭喜&nbsp;151*****867&nbsp;抽中1元红包</li>
+                        <li>恭喜&nbsp;181*****167&nbsp;抽中5元红包</li>
+                        <li>恭喜&nbsp;151*****107&nbsp;抽中10元红包</li>
+                        <li>恭喜&nbsp;181*****167&nbsp;抽中1元红包</li>
+                        <li>恭喜&nbsp;176*****768&nbsp;抽中5元红包</li>
+                        <li>恭喜&nbsp;139*****088&nbsp;抽中1元红包</li>
+                        <li>恭喜&nbsp;133*****723&nbsp;抽中5元红包</li>
+                        <li>恭喜&nbsp;133*****723&nbsp;抽中1元红包</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://static2.51fanli.net/common/libs/headjs/head.load.min.js"></script>
+    <script>
+    setTimeout(function() {
+        head.load(["http://static2.51fanli.net/common/libs/fmu/js/vendors/jquery/jquery.min.js",
+            "http://static2.51fanli.net/common/js/base.js",
+            "http://static2.51fanli.net/common/libs/fmu/js/core/fmu.js",
+            "http://static2.51fanli.net/common/libs/fmu/js/plugins/css3scrolltext.js",
+            "js/index.js"
+        ]);
+    }, 10);
+    </script>
+</body>
+
+</html>
