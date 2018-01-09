@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>九宫格转盘及变形</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script>
+    (function(win, doc) {
+        
+        var evt = 'onorientationchange' in win ? 'orientationchange' : 'resize';
+        var timer = null;
+        var ua = navigator.userAgent.toLowerCase();
+        var isIos = /ip(hone|od|ad)/i.test(ua);
+        var remwidth = 640;
+
+        function setFontSize() {
+            var docEl = doc.documentElement;
+            var winWidth = docEl.getBoundingClientRect().width;
+            var originFontSize;
+            var definedFontSize = (winWidth / remwidth) * 100;
+
+            docEl.setAttribute('data-screenwidth', winWidth);
+            docEl.style.fontSize = definedFontSize + 'px';
+            originFontSize = parseFloat(window.getComputedStyle(docEl, null).getPropertyValue("font-size"));
+
+            if (!isIos && definedFontSize != originFontSize) {
+                docEl.style.fontSize = (definedFontSize / originFontSize) * definedFontSize + 'px';
+            }
+        }
+        win.addEventListener(evt, function() {
+            clearTimeout(timer);
+            timer = setTimeout(setFontSize, 300);
+        }, false);
+
+
+        win.addEventListener("pageshow", function(e) {
+            if (e.persisted) {
+                clearTimeout(timer);
+                timer = setTimeout(setFontSize, 300);
+            }
+        }, false);
+
+        setFontSize();
+
+    }(window, document));
+    </script>
+    <link rel="stylesheet" href="https://static2.51fanli.net/webapp/css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="turntable">
+        <div class="table-container table-container-1" id="J_lottery_container_1">
+            <h3>- 九宫格</h3>
+            <table>
+                <tr>
+                    <td class="lottery-unit lottery-unit-0">
+                        <div></div>
+                    </td>
+                    <td class="lottery-unit lottery-unit-1">
+                        <div></div>
+                    </td>
+                    <td class="lottery-unit lottery-unit-2">
+                        <div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lottery-unit lottery-unit-7">
+                        <div></div>
+                    </td>
+                    <td class="lottery-wrap">
+                        <div id="J_btn_start_1">点击抽奖</div>
+                    </td>
+                    <td class="lottery-unit lottery-unit-3">
+                        <div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lottery-unit lottery-unit-6">
+                        <div></div>
+                    </td>
+                    <td class="lottery-unit lottery-unit-5">
+                        <div></div>
+                    </td>
+                    <td class="lottery-unit lottery-unit-4">
+                        <div></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="table-container table-container-2" id="J_lottery_container_2">
+            <h3>- 十二宫格</h3>
+            <table>
+                <tr>
+                    <td class="lottery-unit lottery-unit-0">
+                        <div></div>
+                    </td>
+                    <td class="lottery-unit lottery-unit-1">
+                        <div></div>
+                    </td>
+                    <td class="lottery-unit lottery-unit-2">
+                        <div></div>
+                    </td>
+                    <td class="lottery-unit lottery-unit-3">
+                        <div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lottery-unit lottery-unit-11"">
+                        <div></div>
+                    </td>
+                    <td class="lottery-wrap" colspan="2" rowspan="2">
+                        <div id="J_btn_start_2">点击抽奖</div>
+                    </td>
+                    <td class="lottery-unit lottery-unit-4">
+                        <div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lottery-unit lottery-unit-10"">
+                        <div></div>
+                    </td>
+                    <td class="lottery-unit lottery-unit-5">
+                        <div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lottery-unit lottery-unit-9">
+                        <div></div>
+                    </td>
+                    <td class="lottery-unit lottery-unit-8">
+                        <div></div>
+                    </td>
+                    <td class="lottery-unit lottery-unit-7">
+                        <div></div>
+                    </td>
+                    <td class="lottery-unit lottery-unit-6">
+                        <div></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="https://static2.51fanli.net/common/libs/headjs/head.load.min.js"></script>
+    <script>
+    setTimeout(function() {
+        head.load(["https://static2.51fanli.net/common/libs/fmu/js/vendors/jquery/jquery.min.js",
+            "https://static2.51fanli.net/common/js/base.js",
+            "https://static2.51fanli.net/common/libs/fmu/js/plugins/squaredLotteryRoll.js",
+            "js/index.js"
+        ]);
+    }, 10);
+    </script>
+</body>
+
+</html>

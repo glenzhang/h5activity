@@ -1,0 +1,63 @@
+.turntable {
+    padding-bottom: .2rem;
+    background: linear-gradient(to bottom, #86DCF1, #FFA4DB);
+}
+
+.turntable h2 {
+    height: .6rem;
+    line-height: .6rem;
+    color: #fff;
+    font-size: .4rem;
+    text-align: center;
+}
+
+.turntable h3 {
+    text-indent: .4rem;
+    height: .6rem;
+    line-height: .6rem;
+    color: #fff;
+    font-size: .32rem;
+    text-align: left;
+}
+
+.table-container table {
+    margin: 0 auto;
+    padding: .2rem;
+    width: 5rem;
+    height: 4.2rem;
+    box-sizing: border-box;
+}
+
+.table-container .lottery-unit div {
+    margin: 0 auto;
+    width: 1rem;
+    height: 1rem;
+    background: linear-gradient(to bottom, #ffe961, #ffcd30);
+    border-radius: .1rem;
+    border: .03rem solid transparent;
+    box-shadow: 0.01rem 0.04rem 0.04rem #ff8503;
+}
+
+.table-container .lottery-unit.act div {
+    background: #fff;
+    border: .03rem solid #c10000;
+}
+
+.table-container.mode-2 .lottery-unit div {
+    background: #3ab8c9;
+}
+
+.table-container.mode-2 .lottery-unit.act div {
+    background: #fe0;
+}
+
+.table-container .lottery-wrap {
+    font-size: .3rem;
+    color: #fff;
+    text-align: center;
+}
+
+.table-container-2 table {
+    width: 100%;
+    height: 5.4rem;
+}
