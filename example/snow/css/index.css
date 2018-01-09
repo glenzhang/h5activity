@@ -1,0 +1,10 @@
+.sonw-wrap {
+    width: 100%;
+    position: relative;
+}
+
+.snow-canvas {
+    position:absolute;
+    left:0;
+    top:0;
+}
