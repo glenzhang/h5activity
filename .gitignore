@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Desktop Service Store on Mac OS X
+.DS_Store
+
+Thumbs.db
+

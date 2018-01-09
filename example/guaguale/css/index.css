@@ -1,0 +1,20 @@
+.scratch-card-wrap{margin:2rem 0; height:3.34rem; background-size:cover;}
+.scratch-card-inner{position:relative; width:6.36rem; height:2.66rem; overflow:hidden; margin:0 auto 0.15rem; box-sizing:border-box; background:url(../images/scratch-area-box.png) 0 0 no-repeat; background-size:cover;}
+
+.scratch-canvas-wrap-bg{position:absolute; width:100%; height:.86rem; background:url(../images/scratch-area-box-frame.png) top; background-size:6.36rem 2.66rem; z-index:4;}
+.scratch-canvas-wrap{position:relative; top:.54rem; z-index:1; margin:0 auto;  width:5.88rem; height:2.04rem; overflow:hidden;}
+.scratch-canvas-wrap canvas{position:absolute; left:0; top:0; z-index:2; width:100%; height:100%; background-color:#FFF;}
+.scratch-card-result{position:absolute; left:0; top:0; z-index:1; width:100%; height:100%;}
+.scratch-card-result .result-box{display:-webkit-box; position:relative; width:100%; height:100%; background:url(../images/scratch-result-bg.png) top; background-size:cover; -webkit-box-orient:vertical; -webkit-box-pack:center; -webkit-box-align:center; text-align:center; line-height:1em; font-size:0.32rem; color:#cc1941;}
+
+.scratch-card-result .btn-result{display:inline-block; width:1.84rem; height:.46rem; font-size:0.28rem; line-height:.46rem; color:#fff; background:url(../images/btn-bg.png) no-repeat 0 0; background-size:1.98rem 1.48rem;}
+.scratch-card-result .btn-result.btn-end{background-position:0 -.48rem;}
+.scratch-card-result .result-box span{display:block; margin:.1rem 0 0.1rem;}
+.scratch-card-result .result-box p{margin-bottom:0.15rem; font-size:0.46rem;}
+.scratch-card-result .result-box .result-price{font-size:.46rem;}
+
+.scratch-card-wrap .num-info{margin-top:.1rem; height:.26rem; font-size:.2rem; line-height:.26rem; text-align:center; color:#fff;}
+.scratch-card-wrap .num-info .surplus-num{display:inline-block; margin:0 .04rem; width:.24rem; height:.26rem; border:2px solid #c3636d; background:#b22332; text-align:center; color:#ffcc01;}
+
+
+.fl-hairlines .fission-users, .fl-hairlines .fission-users li{border-width:0.6px;}
